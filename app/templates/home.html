@@ -1,0 +1,11 @@
+<h1>Students</h1>
+<a href="/add/">Add Student</a>
+
+<ul>
+  {% for s in students %}
+    <li>
+      {{ s.name }} - {{ s.email }} - {{ s.age }}
+      <a href="/delete/{{ s.id }}/">Delete</a>
+    </li>
+  {% endfor %}
+</ul>
